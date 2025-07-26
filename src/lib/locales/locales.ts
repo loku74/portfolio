@@ -10,8 +10,7 @@ export const locales = {
 		navbar: {
 			home: 'Home',
 			skills: 'Skills',
-			education: 'Education',
-			experience: 'Experience',
+			journey: 'My journey',
 			projects: 'Projects'
 		},
 		terminal: {
@@ -44,8 +43,7 @@ export const locales = {
 		navbar: {
 			home: 'Accueil',
 			skills: 'Compétences',
-			education: 'Parcours',
-			experience: 'Expérience',
+			journey: 'Parcours',
 			projects: 'Projets'
 		},
 		terminal: {

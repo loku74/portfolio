@@ -18,8 +18,7 @@
 	const navItems = $derived([
 		{ id: 'terminal', label: $_.navbar.home, class: 'font-mono font-bold' },
 		{ id: 'skills', label: $_.navbar.skills, class: '' },
-		{ id: 'education', label: $_.navbar.education, class: '' },
-		{ id: 'experience', label: $_.navbar.experience, class: '' },
+		{ id: 'journey', label: $_.navbar.journey, class: '' },
 		{ id: 'projects', label: $_.navbar.projects, class: '' }
 	]);
 

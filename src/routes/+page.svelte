@@ -22,7 +22,7 @@
 >
 	<Skills />
 </div>
-<div id="education" class="flex min-h-screen items-center justify-center bg-app-bg-light">
+<div id="journey" class="flex min-h-screen items-center justify-center bg-app-bg-light">
 	<h2 class="text-4xl font-bold text-white">Education Section</h2>
 </div>
 <div id="experience" class="flex min-h-screen items-center justify-center bg-app-neutral">
