@@ -55,7 +55,7 @@ export function flyIn(node: HTMLElement, options: FlyInOptions = {}) {
 				setTimeout(() => {
 					node.style.transition = savedTransition;
 					node.style.transform = savedTransform;
-				}, duration);
+				}, duration + 100);
 				observer.unobserve(node);
 			}
 		},
