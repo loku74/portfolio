@@ -139,10 +139,8 @@
 	--color-app-text-neutral: hsl(0 0 95%);
 	--color-app-text-muted: hsl(0 0 65%);
 	--color-app-border: hsl(0 0 30%);
-}
-
-body {
-	background-color: hsl(0 0 10%);
+	--color-app-bg-light: hsl(0 0 90%);
+	--color-app-bg-lighter: hsl(0 0 95%);
 }
 
 .nav-button {

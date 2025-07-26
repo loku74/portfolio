@@ -4,6 +4,8 @@
 	import low_level_svg from '$lib/images/svg/low_level.svg';
 	import high_level_svg from '$lib/images/svg/high_level.svg';
 
+	import { flyIn } from '$lib/actions/flyInAction';
+
 	const skills = $derived([
 		{
 			id: 0,
@@ -26,13 +28,16 @@
 	]);
 </script>
 
-<h2 class="inter pb-8 text-5xl text-app-text-neutral">{$_.skills.title}</h2>
-<p class="inter max-w-6xl pb-6 text-justify text-lg text-app-text-muted">
-	{$_.skills.description}
-</p>
-<div class="flex gap-x-8 pt-4">
+<div use:flyIn={{ direction: 'up', distance: 100, threshold: 0.67 }}>
+	<h2 class="inter pb-8 text-center text-5xl text-app-text-neutral">{$_.skills.title}</h2>
+	<p class="inter max-w-6xl pb-6 text-justify text-lg text-app-text-muted">
+		{$_.skills.description}
+	</p>
+</div>
+<div class="grid grid-cols-3 gap-x-8 pt-4">
 	{#each skills as skill (skill.id)}
 		<div
+			use:flyIn={{ direction: 'up', distance: 100, delay: skill.id * 150 }}
 			class="app-border flex max-w-[400px] flex-col items-center rounded-lg bg-app-neutral px-12 py-8 shadow-lg
 		 shadow-white/25"
 		>
