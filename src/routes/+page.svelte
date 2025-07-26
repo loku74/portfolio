@@ -2,12 +2,13 @@
 	import Terminal from '$lib/components/Terminal.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Skills from '$lib/components/Skills.svelte';
+	import Projects from '$lib/components/Projects.svelte';
 
 	const debug = !true;
 </script>
 
 <div
-	id="terminal"
+	id="home"
 	class="bg flex min-h-screen flex-col items-center bg-linear-300 from-indigo-500 via-red-400 to-purple-500"
 	style=""
 >
@@ -16,21 +17,35 @@
 </div>
 <div
 	id="skills"
-	class="flex max-h-screen flex-col items-center justify-center bg-app-dark py-32 {debug
+	class="flex max-h-screen flex-col items-center justify-center bg-app-neutral py-32 {debug
 		? 'border border-red-500'
 		: ''}"
 >
 	<Skills />
 </div>
-<div id="journey" class="flex min-h-screen items-center justify-center bg-app-bg-light">
-	<h2 class="text-4xl font-bold text-white">Education Section</h2>
+<div id="projects" class="flex min-h-screen flex-col items-center justify-center bg-app-dark">
+	<Projects />
 </div>
-<div id="experience" class="flex min-h-screen items-center justify-center bg-app-neutral">
-	<h2 class="text-4xl font-bold text-white">Experience Section</h2>
-</div>
-<div id="projects" class="flex min-h-screen items-center justify-center bg-app-light">
-	<h2 class="text-4xl font-bold text-white">Projects Section</h2>
-</div>
+<footer
+	class="mt-auto flex items-center justify-center gap-16 border-t border-app-border bg-app-dark py-4"
+>
+	<button onclick={() => window.open('https://github.com/loku74')}>
+		<img
+			src="https://devicon-website.vercel.app/api/github/original.svg?color=%23F5F5F5"
+			alt="Github logo"
+			class="w-10 cursor-pointer"
+		/>
+	</button>
+	<button
+		onclick={() => window.open('https://www.linkedin.com/in/lo%C3%AFc-bourniquel-a99987203/')}
+	>
+		<img
+			src="https://devicon-website.vercel.app/api/linkedin/plain.svg?color=%23F5F5F5"
+			alt="LinkedIn logo"
+			class="w-10 cursor-pointer"
+		/>
+	</button>
+</footer>
 
 <style>
 	.bg {

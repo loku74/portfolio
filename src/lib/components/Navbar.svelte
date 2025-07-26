@@ -34,9 +34,8 @@
 	});
 
 	const navItems = $derived([
-		{ id: 'terminal', label: $_.navbar.home, class: 'font-mono font-bold' },
+		{ id: 'home', label: $_.navbar.home, class: 'font-mono font-bold' },
 		{ id: 'skills', label: $_.navbar.skills, class: '' },
-		{ id: 'journey', label: $_.navbar.journey, class: '' },
 		{ id: 'projects', label: $_.navbar.projects, class: '' }
 	]);
 
@@ -63,7 +62,7 @@
 		scrollY = window.scrollY;
 		isFixed = scrollY > 56;
 
-		const sections = ['terminal', 'skills', 'education', 'experience', 'projects'];
+		const sections = navItems.map((item) => item.id);
 		for (const sectionId of sections) {
 			const element = document.getElementById(sectionId);
 			if (element) {
