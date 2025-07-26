@@ -13,7 +13,25 @@
 	let interval: number = 0;
 	let isFixed = $state(false);
 	let scrollY = $state(0);
+
 	let activeSection = $state('terminal');
+
+	onMount(() => {
+		updateTime();
+		interval = setInterval(updateTime, 1000);
+
+		if (browser) {
+			window.addEventListener('scroll', handleScroll);
+			handleScroll(); // Set initial state
+		}
+	});
+
+	onDestroy(() => {
+		clearInterval(interval);
+		if (browser) {
+			window.removeEventListener('scroll', handleScroll);
+		}
+	});
 
 	const navItems = $derived([
 		{ id: 'terminal', label: $_.navbar.home, class: 'font-mono font-bold' },
@@ -59,23 +77,6 @@
 		}
 	}
 
-	onMount(() => {
-		updateTime();
-		interval = setInterval(updateTime, 1000);
-
-		if (browser) {
-			window.addEventListener('scroll', handleScroll);
-			handleScroll(); // Set initial state
-		}
-	});
-
-	onDestroy(() => {
-		clearInterval(interval);
-		if (browser) {
-			window.removeEventListener('scroll', handleScroll);
-		}
-	});
-
 	const availableLanguages = ['FR', 'US'];
 	const languagesRecord: Record<string, { label: string; class: string }> = {
 		US: { label: 'English (US)', class: 'us' },
@@ -93,17 +94,18 @@
 </script>
 
 <div
-	class="fixed top-0 right-0 left-0 z-50 flex items-center gap-1.5 text-sm text-white transition-all duration-400 ease-out {debug
+	class="fixed top-0 right-0 left-0 z-50 flex items-center gap-1.5 text-sm text-white {debug
 		? 'border border-green-500'
-		: 'border border-app-border'}"
+		: ''} {isFixed ? 'border border-app-border' : ''}"
 	style="
-		transform: {isFixed ? 'translateY(.5rem)' : 'translateY(0) scale(1)'};
+		transform: {isFixed ? 'translateY(.5rem)' : 'translateY(0)'};
 		margin: {isFixed ? '0 2rem' : '0'};
 		border-radius: {isFixed ? '0.5rem' : '0'};
 		padding: {isFixed ? '0.75rem 1rem' : '0.375rem 1rem'};
 		background: {isFixed ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0.3)'};
 		backdrop-filter: {isFixed ? 'blur(12px)' : 'none'};
 		box-shadow: {isFixed ? '0 8px 32px rgba(0, 0, 0, 0.4)' : 'none'};
+		transition: transform 300ms ease-out, background-color 300ms ease-out, box-shadow 300ms ease-out, margin 300ms ease-out, padding 300ms ease-out, border-radius 300ms ease-out;
 	"
 >
 	<img
