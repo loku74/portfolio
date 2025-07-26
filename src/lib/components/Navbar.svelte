@@ -95,7 +95,7 @@
 <div
 	class="fixed top-0 right-0 left-0 z-50 flex items-center gap-1.5 text-sm text-white transition-all duration-400 ease-out {debug
 		? 'border border-green-500'
-		: ''}"
+		: 'border border-app-border'}"
 	style="
 		transform: {isFixed ? 'translateY(.5rem)' : 'translateY(0) scale(1)'};
 		margin: {isFixed ? '0 2rem' : '0'};
