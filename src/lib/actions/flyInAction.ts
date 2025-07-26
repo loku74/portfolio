@@ -38,6 +38,8 @@ export function flyIn(node: HTMLElement, options: FlyInOptions = {}) {
 
 	// Set initial state
 	node.style.opacity = '0';
+	const savedTransform = node.style.transform;
+	const savedTransition = node.style.transition;
 	node.style.transform = getInitialTransform(direction, distance);
 	node.style.transition = `opacity ${duration}ms ${getCSSEasing('quintOut')}, transform ${duration}ms ${getCSSEasing('quintOut')}`;
 
@@ -49,6 +51,8 @@ export function flyIn(node: HTMLElement, options: FlyInOptions = {}) {
 					node.style.transform = 'translate(0, 0)';
 					hasAnimated = true;
 				}, delay);
+				node.style.transform = savedTransform;
+				node.style.transition = savedTransition;
 				observer.unobserve(node);
 			}
 		},
