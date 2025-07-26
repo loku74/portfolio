@@ -49,10 +49,13 @@ export function flyIn(node: HTMLElement, options: FlyInOptions = {}) {
 				setTimeout(() => {
 					node.style.opacity = '1';
 					node.style.transform = 'translate(0, 0)';
+
 					hasAnimated = true;
 				}, delay);
-				node.style.transform = savedTransform;
-				node.style.transition = savedTransition;
+				setTimeout(() => {
+					node.style.transition = savedTransition;
+					node.style.transform = savedTransform;
+				}, duration);
 				observer.unobserve(node);
 			}
 		},
