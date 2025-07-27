@@ -32,7 +32,7 @@
 </script>
 
 <div
-	class="mx-4 my-16 flex flex-col rounded-xl bg-app-neutral shadow-2xl/100 outline-1 outline-black transition-all duration-200 sm:my-auto md:w-3xl lg:w-5xl xl:w-6xl {debug
+	class="mx-4 mt-16 mb-8 flex flex-col rounded-xl bg-app-neutral shadow-2xl/100 outline-1 outline-black transition-all duration-200 sm:my-auto md:w-3xl lg:w-5xl xl:w-6xl {debug
 		? 'border border-red-500'
 		: 'border border-app-border'}"
 >
