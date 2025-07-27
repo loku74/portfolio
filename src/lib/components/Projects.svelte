@@ -22,7 +22,7 @@
 			badges={project.badges}
 			text={project.text}
 			mutedText={project.mutedText}
-			preview_images={project.preview_images}
+			images={project.images}
 			github_url={project.github_url}
 			reversed={project.id % 2 == 1}
 		/>

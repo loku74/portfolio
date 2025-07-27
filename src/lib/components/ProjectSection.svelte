@@ -12,7 +12,7 @@
 		text,
 		mutedText,
 		github_url = null,
-		preview_images,
+		images,
 		reversed = false
 	} = $props();
 
@@ -48,7 +48,7 @@
 			class="{reversed ? 'order-[1]' : ''}  lg:col-span-2 xl:col-span-3"
 		>
 			<Carousel.Content class="">
-				{#each preview_images as image, index (index)}
+				{#each images as image, index (index)}
 					<Carousel.Item class="">
 						<button
 							class="group relative block cursor-pointer bg-transparent"
@@ -104,7 +104,7 @@
 			}}
 		>
 			<Carousel.Content>
-				{#each preview_images as image, index (index)}
+				{#each images as image, index (index)}
 					<Carousel.Item>
 						<img src={image} alt="Project Screenshot" />
 					</Carousel.Item>

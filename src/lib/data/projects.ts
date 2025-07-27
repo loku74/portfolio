@@ -1,25 +1,25 @@
-import dvtool_preview_1 from '$lib/images/projects/dvtool_1.webp';
-import dvtool_preview_2 from '$lib/images/projects/dvtool_2.webp';
-import dvtool_preview_3 from '$lib/images/projects/dvtool_3.webp';
+import dvtool_1 from '$lib/images/projects/dvtool_1.webp';
+import dvtool_2 from '$lib/images/projects/dvtool_2.webp';
+import dvtool_3 from '$lib/images/projects/dvtool_3.webp';
 
-import cub_preview_1 from '$lib/images/projects/cub_1.webp';
-import cub_preview_2 from '$lib/images/projects/cub_2.webp';
-import cub_preview_3 from '$lib/images/projects/cub_3.webp';
+import cub_1 from '$lib/images/projects/cub_1.webp';
+import cub_2 from '$lib/images/projects/cub_2.webp';
+import cub_3 from '$lib/images/projects/cub_3.webp';
 
-import irc_preview_1 from '$lib/images/projects/irc_1.webp';
-import irc_preview_2 from '$lib/images/projects/irc_2.webp';
-import irc_preview_3 from '$lib/images/projects/irc_3.webp';
+import irc_1 from '$lib/images/projects/irc_1.webp';
+import irc_2 from '$lib/images/projects/irc_2.webp';
+import irc_3 from '$lib/images/projects/irc_3.webp';
 
-import tsd_preview_1 from '$lib/images/projects/tsd_1.webp';
-import tsd_preview_2 from '$lib/images/projects/tsd_2.webp';
-import tsd_preview_3 from '$lib/images/projects/tsd_3.webp';
-import tsd_preview_4 from '$lib/images/projects/tsd_4.webp';
-import tsd_preview_5 from '$lib/images/projects/tsd_5.webp';
+import tsd_1 from '$lib/images/projects/tsd_1.webp';
+import tsd_2 from '$lib/images/projects/tsd_2.webp';
+import tsd_3 from '$lib/images/projects/tsd_3.webp';
+import tsd_4 from '$lib/images/projects/tsd_4.webp';
+import tsd_5 from '$lib/images/projects/tsd_5.webp';
 
-import solong_preview_1 from '$lib/images/projects/solong_1.webp';
-import solong_preview_2 from '$lib/images/projects/solong_2.webp';
-import solong_preview_3 from '$lib/images/projects/solong_3.webp';
-import solong_preview_4 from '$lib/images/projects/solong_4.webp';
+import solong_1 from '$lib/images/projects/solong_1.webp';
+import solong_2 from '$lib/images/projects/solong_2.webp';
+import solong_3 from '$lib/images/projects/solong_3.webp';
+import solong_4 from '$lib/images/projects/solong_4.webp';
 
 type ProjectData = {
 	id: number;
@@ -28,7 +28,7 @@ type ProjectData = {
 	text: string;
 	mutedText?: string;
 	badges: string[];
-	preview_images: string[];
+	images: string[];
 	github_url?: string | null;
 };
 
@@ -41,7 +41,7 @@ export const projects_en: ProjectData[] = [
 		mutedText:
 			'AG-Grid and AG-Charts (Enterprise version) were used for the data grid and some of the charts.',
 		badges: ['python', 'sveltejs', 'typescript', 'tailwindcss'],
-		preview_images: [dvtool_preview_1, dvtool_preview_2, dvtool_preview_3],
+		images: [dvtool_1, dvtool_2, dvtool_3],
 		github_url: null
 	},
 	{
@@ -52,7 +52,7 @@ export const projects_en: ProjectData[] = [
 		mutedText:
 			'MiniLibX is a tiny graphics library which allows you to do the most basic things for rendering something in screens without any knowledge of X-Window and Cocoa. Done with another student.',
 		badges: ['c'],
-		preview_images: [cub_preview_1, cub_preview_2, cub_preview_3],
+		images: [cub_1, cub_2, cub_3],
 		github_url: 'https://github.com/loku74/42_cursus/tree/master/cub3D'
 	},
 	{
@@ -63,7 +63,7 @@ export const projects_en: ProjectData[] = [
 		mutedText:
 			'Not all IRC commands were built as the project itself only required the most essential features to be implemented. Done with 2 other students.',
 		badges: ['c', 'cpp'],
-		preview_images: [irc_preview_1, irc_preview_2, irc_preview_3],
+		images: [irc_1, irc_2, irc_3],
 		github_url: 'https://github.com/loku74/42_cursus/tree/master/ft_irc/ircserv'
 	},
 	{
@@ -74,7 +74,7 @@ export const projects_en: ProjectData[] = [
 		mutedText:
 			'It is clearly not the best looking and functional website (yet it is responsive and mobile ready!) but we learned a lot. Done with 2 other students.',
 		badges: ['vuejs', 'typescript', 'nestjs', 'docker'],
-		preview_images: [tsd_preview_1, tsd_preview_2, tsd_preview_3, tsd_preview_4, tsd_preview_5],
+		images: [tsd_1, tsd_2, tsd_3, tsd_4, tsd_5],
 		github_url:
 			'https://github.com/Ratinax/ft_transcendence/tree/778d5f28fb0a5152c44994d9f131c7391b94b226'
 	},
@@ -86,7 +86,7 @@ export const projects_en: ProjectData[] = [
 		mutedText:
 			'MiniLibX is a tiny graphics library which allows you to do the most basic things for rendering something in screens without any knowledge of X-Window and Cocoa.',
 		badges: ['c'],
-		preview_images: [solong_preview_1, solong_preview_2, solong_preview_3, solong_preview_4],
+		images: [solong_1, solong_2, solong_3, solong_4],
 		github_url: 'https://github.com/loku74/42_cursus/tree/master/so_long'
 	}
 ];
@@ -100,7 +100,7 @@ export const projects_fr: ProjectData[] = [
 		mutedText:
 			"AG-Grid et AG-Charts (version enterprise) ont été utilisés pour l'affichae des données et de certains graphiques.",
 		badges: ['python', 'sveltejs', 'typescript', 'tailwindcss'],
-		preview_images: [dvtool_preview_1, dvtool_preview_2, dvtool_preview_3],
+		images: [dvtool_1, dvtool_2, dvtool_3],
 		github_url: null
 	},
 	{
@@ -111,7 +111,7 @@ export const projects_fr: ProjectData[] = [
 		mutedText:
 			"MiniLibX est une petite bibliothèque graphique qui permet de faire les choses les plus basiques pour afficher quelque chose à l'écran sans aucune connaissance de X-Window et Cocoa. Réalisé avec un autre étudiant.",
 		badges: ['c'],
-		preview_images: [cub_preview_1, cub_preview_2, cub_preview_3],
+		images: [cub_1, cub_2, cub_3],
 		github_url: 'https://github.com/loku74/42_cursus/tree/master/cub3D'
 	},
 	{
@@ -122,7 +122,7 @@ export const projects_fr: ProjectData[] = [
 		mutedText:
 			'Pas toutes les commandes IRC ont été implémentées car le projet lui-même ne nécessitait que les fonctionnalités les plus essentielles. Réalisé avec 2 autres étudiants.',
 		badges: ['c', 'cpp'],
-		preview_images: [irc_preview_1, irc_preview_2, irc_preview_3],
+		images: [irc_1, irc_2, irc_3],
 		github_url: 'https://github.com/loku74/42_cursus/tree/master/ft_irc/ircserv'
 	},
 	{
@@ -133,7 +133,7 @@ export const projects_fr: ProjectData[] = [
 		mutedText:
 			"Ce n'est clairement pas le site web le plus beau et fonctionnel (mais il est responsive et 'mobile-ready' !) mais nous avons beaucoup appris. Réalisé avec 2 autres étudiants.",
 		badges: ['vuejs', 'typescript', 'nestjs', 'docker'],
-		preview_images: [tsd_preview_1, tsd_preview_2, tsd_preview_3, tsd_preview_4, tsd_preview_5],
+		images: [tsd_1, tsd_2, tsd_3, tsd_4, tsd_5],
 		github_url:
 			'https://github.com/Ratinax/ft_transcendence/tree/778d5f28fb0a5152c44994d9f131c7391b94b226'
 	},
@@ -145,7 +145,7 @@ export const projects_fr: ProjectData[] = [
 		mutedText:
 			"MiniLibX est une petite bibliothèque graphique qui permet de faire les choses les plus basiques pour afficher quelque chose à l'écran sans aucune connaissance de X-Window et Cocoa.",
 		badges: ['c'],
-		preview_images: [solong_preview_1, solong_preview_2, solong_preview_3, solong_preview_4],
+		images: [solong_1, solong_2, solong_3, solong_4],
 		github_url: 'https://github.com/loku74/42_cursus/tree/master/so_long'
 	}
 ];
