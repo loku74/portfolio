@@ -127,7 +127,7 @@
 				{selectedLanguage}</DropdownMenu.Trigger
 			>
 			<DropdownMenu.Content
-				class="mt-2 mr-24 w-42 border border-app-border/70 bg-white/70 text-app-dark backdrop-blur"
+				class="mt-2 mr-4 w-42 border border-app-border/70 bg-white/70 text-app-dark backdrop-blur sm:mr-0"
 				align="start"
 				preventScroll={false}
 			>
