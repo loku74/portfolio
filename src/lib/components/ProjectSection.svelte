@@ -25,20 +25,23 @@
 	class="max-w-7xl rounded-xl px-2 py-16 text-app-text-neutral"
 	id={`project-${project_title}`}
 >
-	<div class="mb-2 flex items-center justify-between">
-		<h2 class="jb-mono mb-4 text-5xl font-medium text-orange-300">{project_title}</h2>
+	<div class="flex items-center">
+		<h2 class="jb-mono text-5xl font-medium text-orange-300 {reversed ? 'order-[1]' : ''}">
+			{project_title}
+		</h2>
 
 		{#if github_url}
-			<button
+			<a
+				href={github_url}
+				rel="noopener noreferrer"
 				aria-label="Open GitHub repository"
-				class="cursor-pointer"
-				onclick={() => window.open(github_url, '_blank')}
+				class="cursor-pointer {reversed ? 'mr-auto' : 'ml-auto'}"
 			>
-				<i class="devicon-github-original text-3xl"></i>
-			</button>
+				<i class="devicon-github-original text-4xl"></i>
+			</a>
 		{/if}
 	</div>
-	<div class="flex flex-col gap-12 lg:grid lg:grid-cols-4 xl:grid-cols-5">
+	<div class="mt-6 flex flex-col gap-12 lg:grid lg:grid-cols-4 xl:grid-cols-5">
 		<Carousel.Root
 			opts={{ loop: true }}
 			plugins={[Autoplay({ delay: 10000 })]}
