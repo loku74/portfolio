@@ -93,14 +93,13 @@
 </script>
 
 <div
-	class="fixed top-0 right-0 left-0 z-50 flex items-center gap-1.5 text-xs text-white md:text-sm {debug
+	class="fixed top-0 right-0 left-0 z-50 flex items-center gap-1.5 px-2 py-1.5 text-xs text-white md:text-sm {debug
 		? 'border border-green-500'
 		: ''} {isFixed ? 'border border-app-border' : ''}"
 	style="
 		transform: {isFixed ? 'translateY(.5rem)' : 'translateY(0)'};
 		margin: {isFixed ? '0 1rem' : '0'};
 		border-radius: {isFixed ? '0.5rem' : '0'};
-		padding: {isFixed ? '0.75rem 1rem' : '0.375rem 1rem'};
 		background: {isFixed ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0.3)'};
 		backdrop-filter: {isFixed ? 'blur(12px)' : 'none'};
 		box-shadow: {isFixed ? '0 8px 32px rgba(0, 0, 0, 0.4)' : 'none'};
