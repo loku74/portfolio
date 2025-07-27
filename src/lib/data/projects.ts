@@ -1,25 +1,25 @@
-import dvtool_preview_1 from '$lib/images/dvtool_1.webp';
-import dvtool_preview_2 from '$lib/images/dvtool_2.webp';
-import dvtool_preview_3 from '$lib/images/dvtool_3.webp';
+import dvtool_preview_1 from '$lib/images/projects/dvtool_1.webp';
+import dvtool_preview_2 from '$lib/images/projects/dvtool_2.webp';
+import dvtool_preview_3 from '$lib/images/projects/dvtool_3.webp';
 
-import cub_preview_1 from '$lib/images/cub_1.webp';
-import cub_preview_2 from '$lib/images/cub_2.webp';
-import cub_preview_3 from '$lib/images/cub_3.webp';
+import cub_preview_1 from '$lib/images/projects/cub_1.webp';
+import cub_preview_2 from '$lib/images/projects/cub_2.webp';
+import cub_preview_3 from '$lib/images/projects/cub_3.webp';
 
-import irc_preview_1 from '$lib/images/irc_1.webp';
-import irc_preview_2 from '$lib/images/irc_2.webp';
-import irc_preview_3 from '$lib/images/irc_3.webp';
+import irc_preview_1 from '$lib/images/projects/irc_1.webp';
+import irc_preview_2 from '$lib/images/projects/irc_2.webp';
+import irc_preview_3 from '$lib/images/projects/irc_3.webp';
 
-import tsd_preview_1 from '$lib/images/tsd_1.webp';
-import tsd_preview_2 from '$lib/images/tsd_2.webp';
-import tsd_preview_3 from '$lib/images/tsd_3.webp';
-import tsd_preview_4 from '$lib/images/tsd_4.webp';
-import tsd_preview_5 from '$lib/images/tsd_5.webp';
+import tsd_preview_1 from '$lib/images/projects/tsd_1.webp';
+import tsd_preview_2 from '$lib/images/projects/tsd_2.webp';
+import tsd_preview_3 from '$lib/images/projects/tsd_3.webp';
+import tsd_preview_4 from '$lib/images/projects/tsd_4.webp';
+import tsd_preview_5 from '$lib/images/projects/tsd_5.webp';
 
-import solong_preview_1 from '$lib/images/solong_1.webp';
-import solong_preview_2 from '$lib/images/solong_2.webp';
-import solong_preview_3 from '$lib/images/solong_3.webp';
-import solong_preview_4 from '$lib/images/solong_4.webp';
+import solong_preview_1 from '$lib/images/projects/solong_1.webp';
+import solong_preview_2 from '$lib/images/projects/solong_2.webp';
+import solong_preview_3 from '$lib/images/projects/solong_3.webp';
+import solong_preview_4 from '$lib/images/projects/solong_4.webp';
 
 type ProjectData = {
 	id: number;

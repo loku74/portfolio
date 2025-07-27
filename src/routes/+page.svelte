@@ -29,22 +29,20 @@
 <footer
 	class="mt-auto flex items-center justify-center gap-16 border-t border-app-border bg-app-dark py-4"
 >
-	<button onclick={() => window.open('https://github.com/loku74')}>
+	<a href="https://github.com/loku74" rel="noopener noreferrer">
 		<img
 			src="https://devicon-website.vercel.app/api/github/original.svg?color=%23F5F5F5"
 			alt="Github logo"
 			class="w-10 cursor-pointer"
 		/>
-	</button>
-	<button
-		onclick={() => window.open('https://www.linkedin.com/in/lo%C3%AFc-bourniquel-a99987203/')}
-	>
+	</a>
+	<a href="https://www.linkedin.com/in/lo%C3%AFc-bourniquel-a99987203/" rel="noopener noreferrer">
 		<img
 			src="https://devicon-website.vercel.app/api/linkedin/plain.svg?color=%23F5F5F5"
 			alt="LinkedIn logo"
 			class="w-10 cursor-pointer"
 		/>
-	</button>
+	</a>
 </footer>
 
 <style>
