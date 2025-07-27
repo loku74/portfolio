@@ -93,12 +93,12 @@
 </script>
 
 <div
-	class="fixed top-0 right-0 left-0 z-50 flex items-center gap-1.5 text-sm text-white {debug
+	class="fixed top-0 right-0 left-0 z-50 flex items-center gap-1.5 text-xs text-white md:text-sm {debug
 		? 'border border-green-500'
 		: ''} {isFixed ? 'border border-app-border' : ''}"
 	style="
 		transform: {isFixed ? 'translateY(.5rem)' : 'translateY(0)'};
-		margin: {isFixed ? '0 2rem' : '0'};
+		margin: {isFixed ? '0 1rem' : '0'};
 		border-radius: {isFixed ? '0.5rem' : '0'};
 		padding: {isFixed ? '0.75rem 1rem' : '0.375rem 1rem'};
 		background: {isFixed ? 'rgba(0, 0, 0, 0.7)' : 'rgba(0, 0, 0, 0.3)'};
@@ -110,7 +110,7 @@
 	<img
 		alt="Background"
 		src="https://devicon-website.vercel.app/api/svelte/plain.svg?color=%23FFFFFF"
-		class="mr-1 w-5"
+		class="mr-1 hidden w-5 sm:block"
 	/>
 	{#each navItems as item (item.id)}
 		<button
@@ -147,7 +147,7 @@
 				</DropdownMenu.Group>
 			</DropdownMenu.Content>
 		</DropdownMenu.Root>
-		<div class="nav-button">
+		<div class="nav-button hidden md:block">
 			<svg
 				width="18px"
 				height="18px"
@@ -174,7 +174,7 @@
 				</g></svg
 			>
 		</div>
-		<div class="nav-button flex gap-1">
+		<div class="nav-button hidden gap-1 sm:flex">
 			{#each currentTime as str, index (index)}
 				<span class={index + 1 == currentTime.length ? 'ml-1' : ''}>
 					{str}
