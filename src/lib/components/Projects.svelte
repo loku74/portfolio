@@ -7,7 +7,7 @@
 	<div
 		class="flex w-full flex-col items-center border-y border-app-border {project.id % 2 == 1
 			? 'bg-app-neutral'
-			: 'bg-app-bg-dark'}"
+			: 'bg-app-dark'}"
 	>
 		{#if project.id == 0}
 			<h1 class="jb-mono pt-20 text-4xl font-medium text-app-text-neutral md:text-5xl xl:text-6xl">

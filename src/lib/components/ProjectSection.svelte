@@ -25,7 +25,7 @@
 	class="max-w-7xl rounded-xl px-6 py-16 text-app-text-neutral xl:px-2"
 	id={`project-${project_title}`}
 >
-	<div class="flex items-center">
+	<div class="flex w-full items-center">
 		<h2
 			class="jb-mono text-3xl font-medium text-orange-300 lg:text-5xl {reversed
 				? 'lg:order-[1]'
@@ -39,9 +39,11 @@
 				href={github_url}
 				rel="noopener noreferrer"
 				aria-label="Open GitHub repository"
-				class="cursor-pointer {reversed ? 'lg:mr-auto' : ''} ml-auto"
+				class="cursor-pointer {reversed
+					? 'lg:mr-auto'
+					: 'lg:ml-auto'} mr-0 ml-auto flex items-center"
 			>
-				<i class="devicon-github-original text-4xl"></i>
+				<i class="devicon-github-original text-2xl sm:text-4xl"></i>
 			</a>
 		{/if}
 	</div>

@@ -32,7 +32,7 @@ function getCSSEasing(easingName: string): string {
 }
 
 export function flyIn(node: HTMLElement, options: FlyInOptions = {}) {
-	const { threshold = 0.4, direction = 'up', duration = 1000, distance = 66, delay = 0 } = options;
+	const { threshold = 0.5, direction = 'up', duration = 1000, distance = 66, delay = 0 } = options;
 
 	let hasAnimated = false;
 

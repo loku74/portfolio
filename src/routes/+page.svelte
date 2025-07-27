@@ -9,7 +9,7 @@
 
 <div
 	id="home"
-	class="bg flex min-h-screen flex-col items-center bg-linear-300 from-indigo-500 via-red-400 to-purple-500"
+	class="bg flex flex-col items-center bg-linear-300 from-indigo-500 via-red-400 to-purple-500 sm:min-h-screen"
 	style=""
 >
 	<Navbar {debug} />
@@ -23,7 +23,7 @@
 >
 	<Skills />
 </div>
-<div id="projects" class="flex min-h-screen flex-col items-center justify-center bg-app-dark">
+<div id="projects">
 	<Projects />
 </div>
 <footer

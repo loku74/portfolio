@@ -28,7 +28,7 @@
 	]);
 </script>
 
-<div use:flyIn={{ direction: 'up', distance: 100, threshold: 0.67 }}>
+<div use:flyIn>
 	<h2 class="inter pb-8 text-center text-3xl text-app-text-neutral lg:text-5xl">
 		{$_.skills.title}
 	</h2>
