@@ -17,7 +17,7 @@
 </div>
 <div
 	id="skills"
-	class="flex max-h-screen flex-col items-center justify-center bg-app-neutral py-32 {debug
+	class="flex flex-col items-center justify-center bg-app-neutral py-12 lg:py-24 xl:max-h-screen xl:py-32 {debug
 		? 'border border-red-500'
 		: ''}"
 >

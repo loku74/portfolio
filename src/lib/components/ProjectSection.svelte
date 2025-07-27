@@ -22,11 +22,15 @@
 
 <div
 	use:flyIn
-	class="max-w-7xl rounded-xl px-2 py-16 text-app-text-neutral"
+	class="max-w-7xl rounded-xl px-6 py-16 text-app-text-neutral xl:px-2"
 	id={`project-${project_title}`}
 >
 	<div class="flex items-center">
-		<h2 class="jb-mono text-5xl font-medium text-orange-300 {reversed ? 'order-[1]' : ''}">
+		<h2
+			class="jb-mono text-3xl font-medium text-orange-300 lg:text-5xl {reversed
+				? 'lg:order-[1]'
+				: ''}"
+		>
 			{project_title}
 		</h2>
 
@@ -35,7 +39,7 @@
 				href={github_url}
 				rel="noopener noreferrer"
 				aria-label="Open GitHub repository"
-				class="cursor-pointer {reversed ? 'mr-auto' : 'ml-auto'}"
+				class="cursor-pointer {reversed ? 'lg:mr-auto' : ''} ml-auto"
 			>
 				<i class="devicon-github-original text-4xl"></i>
 			</a>
@@ -45,7 +49,7 @@
 		<Carousel.Root
 			opts={{ loop: true }}
 			plugins={[Autoplay({ delay: 10000 })]}
-			class="{reversed ? 'order-[1]' : ''}  lg:col-span-2 xl:col-span-3"
+			class="{reversed ? 'lg:order-[1]' : ''}  lg:col-span-2 xl:col-span-3"
 		>
 			<Carousel.Content class="">
 				{#each images as image, index (index)}
@@ -74,7 +78,7 @@
 				{/each}
 			</Carousel.Content>
 		</Carousel.Root>
-		<div class="col-span-5 flex flex-col text-lg lg:col-span-2">
+		<div class="col-span-5 flex flex-col lg:col-span-2 xl:text-lg">
 			<p class="mb-2 text-orange-300 italic">{project_note}</p>
 			<p class="text-justify">{text}</p>
 			{#if mutedText}

@@ -10,9 +10,7 @@
 			: 'bg-app-bg-dark'}"
 	>
 		{#if project.id == 0}
-			<h1
-				class="jb-mono pt-20 text-6xl font-medium text-app-text-neutral underline underline-offset-4"
-			>
+			<h1 class="jb-mono pt-20 text-4xl font-medium text-app-text-neutral md:text-5xl xl:text-6xl">
 				Projects
 			</h1>
 		{/if}
