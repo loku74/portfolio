@@ -21,7 +21,7 @@
 </script>
 
 <div
-	use:flyIn={{ y: 100 }}
+	use:flyIn
 	class="max-w-7xl rounded-xl px-2 py-16 text-app-text-neutral"
 	id={`project-${project_title}`}
 >

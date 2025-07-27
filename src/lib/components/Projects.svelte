@@ -1,9 +1,9 @@
 <script lang="ts">
 	import ProjectSection from './ProjectSection.svelte';
-	import projects from '$lib/data/projects';
+	import { lang as _ } from '$lib/locales/locales';
 </script>
 
-{#each projects as project (project.id)}
+{#each $_.projects.list as project (project.id)}
 	<div
 		class="flex w-full flex-col items-center border-y border-app-border {project.id % 2 == 1
 			? 'bg-app-neutral'

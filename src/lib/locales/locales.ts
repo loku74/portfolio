@@ -1,5 +1,7 @@
 import { derived, writable } from 'svelte/store';
 
+import { projects_en, projects_fr } from '$lib/data/projects';
+
 export const currentLocale = writable('us');
 export const lang = derived([currentLocale], ([currentLocale]) => {
 	return locales[currentLocale as keyof typeof locales];
@@ -37,6 +39,10 @@ export const locales = {
 				'I am familiar with high-level programming languages such as Python, Java and Javascript.\
 			I have most experience with Python & Javascript and some of their frameworks (django REST framework, Vue & Svelte), acquired through personal projects and professional experience.\
 		 '
+		},
+		projects: {
+			title: 'Projects',
+			list: projects_en
 		}
 	},
 	fr: {
@@ -70,6 +76,10 @@ export const locales = {
 			high_level_description:
 				"Je suis familier avec les langages de programmation de haut niveau tels que Python, Java et Javascript.\
 			J'ai le plus d'expérience avec Python & Javascript et certains de leurs frameworks (django REST framework, Vue & Svelte), acquise au travers de projets personnels et d'expériences professionnelles."
+		},
+		projects: {
+			title: 'Mes projets',
+			list: projects_fr
 		}
 	}
 };
