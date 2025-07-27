@@ -39,9 +39,7 @@
 				href={github_url}
 				rel="noopener noreferrer"
 				aria-label="Open GitHub repository"
-				class="cursor-pointer {reversed
-					? 'lg:mr-auto lg:ml-0'
-					: 'lg:ml-auto'} ml-auto flex items-center"
+				class="cursor-pointer {reversed ? 'lg:mr-auto lg:ml-0' : ''} ml-auto flex items-center"
 			>
 				<i class="devicon-github-original text-2xl sm:text-4xl"></i>
 			</a>
