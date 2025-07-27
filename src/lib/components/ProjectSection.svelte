@@ -76,9 +76,9 @@
 		</Carousel.Root>
 		<div class="col-span-5 flex flex-col text-lg lg:col-span-2">
 			<p class="mb-2 text-orange-300 italic">{project_note}</p>
-			<p>{text}</p>
+			<p class="text-justify">{text}</p>
 			{#if mutedText}
-				<p class="my-4 text-app-text-muted">{mutedText}</p>
+				<p class="my-4 text-justify text-app-text-muted">{mutedText}</p>
 			{/if}
 			<div class="mt-auto flex flex-wrap gap-2">
 				{#each badges as badge, index (index)}
