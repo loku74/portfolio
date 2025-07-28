@@ -11,7 +11,7 @@
 	>
 		{#if project.id == 0}
 			<h1 class="jb-mono pt-20 text-4xl font-medium text-app-text-neutral md:text-5xl xl:text-6xl">
-				Projects
+				{$_.projects.title}
 			</h1>
 		{/if}
 		<ProjectSection
