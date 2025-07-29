@@ -32,7 +32,7 @@
 </script>
 
 <div
-	class="mx-4 mt-16 mb-8 flex flex-col rounded-xl bg-app-neutral shadow-2xl/100 outline-1 outline-black transition-all duration-200 sm:my-auto md:w-3xl lg:w-5xl xl:w-6xl {debug
+	class=" mx-4 mt-16 mb-8 flex flex-col rounded-xl bg-app-neutral text-sm shadow-2xl/100 outline-1 outline-black transition-all duration-200 sm:my-auto md:w-3xl md:text-base lg:w-5xl xl:w-6xl {debug
 		? 'border border-red-500'
 		: 'border border-app-border'}"
 >
@@ -50,7 +50,7 @@
 				class="w-5 sm:w-6"
 				src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg"
 			/>
-			<h3 class="text-sm text-app-text-muted">~/dev/my-portfolio</h3>
+			<h3 class="text-xs text-app-text-muted sm:text-sm">~/dev/my-portfolio</h3>
 		</div>
 	</div>
 	<div class="jb-mono px-2 py-3 text-app-text-neutral">
@@ -113,7 +113,7 @@
 				<a
 					href="/documents/{filename}"
 					download={filename}
-					class="inline-block cursor-pointer rounded border border-app-border bg-app-light px-4 py-2 text-center text-sm no-underline hover:bg-app-hover active:bg-app-light sm:text-lg"
+					class="inline-block cursor-pointer rounded border border-app-border bg-app-light px-4 py-2 text-center text-xs no-underline hover:bg-app-hover active:bg-app-light sm:text-sm md:text-lg"
 				>
 					{$_.terminal.download} <span class="text-orange-400">{filename}</span>
 				</a>

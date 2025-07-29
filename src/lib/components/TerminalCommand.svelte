@@ -2,7 +2,11 @@
 	const { command, paddingTop = true } = $props();
 </script>
 
-<div class="jb-mono {paddingTop ? 'mt-4' : ''} flex items-center gap-2 text-app-text-neutral">
+<div
+	class="jb-mono {paddingTop
+		? 'mt-4'
+		: ''} flex items-center gap-2 text-sm text-app-text-neutral md:text-base"
+>
 	<svg
 		height="12px"
 		width="12px"
