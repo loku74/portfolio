@@ -13,7 +13,8 @@ export const locales = {
 			home: 'Home',
 			skills: 'Skills',
 			projects: 'Projects',
-			contact: 'Contact'
+			// contact: 'Contact',
+			choose_language: 'Choose language'
 		},
 		terminal: {
 			developer: 'Developer',
@@ -50,7 +51,8 @@ export const locales = {
 			home: 'Accueil',
 			skills: 'Compétences',
 			projects: 'Projets',
-			contact: 'Contact'
+			// contact: 'Contact',
+			choose_language: 'Choisir la langue'
 		},
 		terminal: {
 			developer: 'Développeur',

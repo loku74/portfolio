@@ -130,7 +130,8 @@
 				align="start"
 				preventScroll={false}
 			>
-				<DropdownMenu.Label class="text-app-neutral">Choose language</DropdownMenu.Label>
+				<DropdownMenu.Label class="text-app-neutral">{$_.navbar.choose_language}</DropdownMenu.Label
+				>
 				<DropdownMenu.Separator class="bg-app-border/30" />
 				<DropdownMenu.Group class="px-1.5 py-1">
 					{#each availableLanguages as language, index (index)}
