@@ -97,7 +97,7 @@
 				<h2 class="mx-auto mt-8 flex gap-2 text-app-text-neutral sm:text-lg md:text-2xl">
 					{$_.terminal.developer}
 					<span class="text-orange-300 {$currentLocale === 'us' ? '-order-1' : ''}">
-						<TypeWriter typeSpeed={100} texts={['Python', 'C', 'C++', 'Web']} />
+						<TypeWriter typeSpeed={100} texts={['Python', 'C', 'C++', 'Web', 'Swift', 'Mobile']} />
 					</span>
 				</h2>
 			</div>
