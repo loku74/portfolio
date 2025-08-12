@@ -120,8 +120,6 @@
 	}
 }
 
-@import 'tailwindcss';
-
 .gradient {
 	background-image: linear-gradient(to top right, var(--color-app-dark), hsl(0 0 15%));
 }
