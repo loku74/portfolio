@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { lang as _ } from '$lib/locales/locales';
+
 	import web_dev_svg from '$lib/images/svg/web_dev.svg';
 	import low_level_svg from '$lib/images/svg/low_level.svg';
 	import high_level_svg from '$lib/images/svg/high_level.svg';
@@ -41,7 +42,7 @@
 >
 	{#each skills as skill (skill.id)}
 		<div
-			use:flyIn={{ direction: 'up', distance: 100, delay: skill.id * 150 }}
+			use:flyIn={{ delay: (skill.id + 1) * 200 }}
 			class="app-border flex max-w-[400px] flex-col items-center rounded-lg bg-app-bg-lighter px-8 py-6
 	shadow-lg shadow-white/20 duration-200 hover:scale-[104%] hover:bg-white lg:px-12 lg:py-8"
 		>

@@ -21,41 +21,36 @@ function getInitialTransform(direction: string, distance: number): string {
 	}
 }
 
-// CSS easing function approximation for cubic-bezier
-function getCSSEasing(easingName: string): string {
-	switch (easingName) {
-		case 'quintOut':
-			return 'cubic-bezier(0.23, 1, 0.32, 1)';
-		default:
-			return 'ease-out';
-	}
-}
-
 export function flyIn(node: HTMLElement, options: FlyInOptions = {}) {
-	const { threshold = 0.5, direction = 'up', duration = 1000, distance = 66, delay = 0 } = options;
+	const {
+		threshold = 0.33,
+		direction = 'up',
+		duration = 1000,
+		distance = 100,
+		delay = 0
+	} = options;
 
-	let hasAnimated = false;
-
-	// Set initial state
-	node.style.opacity = '0';
 	const savedTransform = node.style.transform;
 	const savedTransition = node.style.transition;
+
+	node.style.opacity = '0';
 	node.style.transform = getInitialTransform(direction, distance);
-	node.style.transition = `opacity ${duration}ms ${getCSSEasing('quintOut')}, transform ${duration}ms ${getCSSEasing('quintOut')}`;
 
 	const observer = new IntersectionObserver(
 		([entry]) => {
-			if (entry.isIntersecting && !hasAnimated) {
+			if (entry.isIntersecting) {
 				setTimeout(() => {
-					node.style.opacity = '1';
+					node.style.transition = `opacity ${duration}ms ease-out, transform ${duration}ms cubic-bezier(0.23, 1, 0.32, 1)`;
 					node.style.transform = 'translate(0, 0)';
-
-					hasAnimated = true;
+					node.style.opacity = '1';
 				}, delay);
-				setTimeout(() => {
-					node.style.transition = savedTransition;
-					node.style.transform = savedTransform;
-				}, duration + 100);
+				setTimeout(
+					() => {
+						node.style.transition = savedTransition;
+						node.style.transform = savedTransform;
+					},
+					duration + delay + 42
+				);
 				observer.unobserve(node);
 			}
 		},
@@ -67,10 +62,6 @@ export function flyIn(node: HTMLElement, options: FlyInOptions = {}) {
 	return {
 		destroy() {
 			observer.unobserve(node);
-		},
-		update(newOptions: FlyInOptions) {
-			// Handle option updates if needed
-			Object.assign(options, newOptions);
 		}
 	};
 }
